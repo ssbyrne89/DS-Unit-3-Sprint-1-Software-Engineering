@@ -20,6 +20,30 @@ class Product():
         self.flammabiltity = flammability
         self.identifier = identifier
 
+    def stealability(self):
+        x = self.price/self.weight
+        if x < 0.5:
+            message = 'not so stealable'
+        else:
+            if x > 1.0:
+                message = "very stealable"
+            else:
+                message = 'kinda stealabe'
+        
+        return message
+
+    def explode(self):
+        x = self.flammabiltity * self.weight
+        if x < 10:
+            message = '...fizzle.'
+        else:
+            if x > 50:
+                message = "....BABOOM!!"
+            else:
+                message = '...boom!'
+        
+        return message
+
 if __name__ == "__main__":
     prod = Product('A cool toy')
     print(prod.name)
