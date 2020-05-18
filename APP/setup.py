@@ -16,5 +16,5 @@ setup(
     #license="MIT",
     url="https://github.com/ssbyrne89/DS-Unit-3-Sprint-1-Software-Engineering",
     #keywords="",
-    packages=['acme'] # ["my_lambdata"]
+    packages=['APP'] # ["my_lambdata"]
 )
