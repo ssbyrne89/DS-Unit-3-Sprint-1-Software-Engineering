@@ -28,7 +28,7 @@ class Product():
             if x > 1.0:
                 message = "very stealable"
             else:
-                message = 'kinda stealabe'
+                message = 'kinda stealable'
         
         return message
 
@@ -43,18 +43,34 @@ class Product():
                 message = '...boom!'
         
         return message
+class BoxingGlove(Product):
+    def __init__(self, name, price=10,
+    weight=10, flammability=0.5,
+    identifier=randint(1000000, 9999999)):
+        super().__init__(name, price, weight, flammability, identifier)
+
+    def explode(self):
+        print("...it's a glove")
+
+    def punch(self):
+        x = self.weight
+        if x < 5:
+            message = 'That tickles!'
+        else:
+            if x > 15:
+                message = "OUCH!!"
+            else:
+                message = 'Hey that hurts!'
+        return message
+
 
 if __name__ == "__main__":
     prod = Product('A cool toy')
     print(prod.name)
-    print(prod.identifier)       
+    print(prod.identifier)     
+
+
 '''
-    def drive(self):
-        print("WE ARE DRIVING", self.model)
-
-    def advertise(self):
-        print("BUY OUR", self.model)
-
 class Truck(Auto): # designates the Truck class should inherit from the Auto class
     def __init__(self, make, model, year, color, num_wheels, bed_size):
         super().__init__(make, model, year, color, num_wheels) # can invoke parent class methods via super()
