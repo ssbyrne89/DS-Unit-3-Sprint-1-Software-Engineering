@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="DS-3-1", # the name that you will install via pip
-    version="1.0.1",
+    version="1.0.2",
     author="Sean",
     author_email="your@email.com",
     description="created for practice",
