@@ -14,7 +14,7 @@ class AcmeProductTests(unittest.TestCase):
 
         def test_acme(self):
         
-        df = DataFrame({"abbrev":["CA","CO","CT","DC","TX"]})
+        df = (products)
         processor = DataProcessor(df)
         self.assertEqual(list(processor.df.columns), ['abbrev'])
 
