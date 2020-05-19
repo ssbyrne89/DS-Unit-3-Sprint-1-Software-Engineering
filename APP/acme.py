@@ -7,7 +7,7 @@ class Product():
         self.name = name
         self.price = price
         self.weight = weight
-        self.flammabiltity = flammability
+        self.flammability = flammability
         self.identifier = identifier
 
     def stealability(self):
@@ -23,7 +23,7 @@ class Product():
         return message
 
     def explode(self):
-        x = self.flammabiltity * self.weight
+        x = self.flammability * self.weight
         if x < 10:
             message = '...fizzle.'
         else:
