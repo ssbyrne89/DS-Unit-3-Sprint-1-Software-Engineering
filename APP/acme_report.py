@@ -65,7 +65,7 @@ if __name__ == '__main__':
 '''
 
 import random
-from acme import Product
+from APP.acme import Product
 
 ADJECTIVES = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
 NOUNS = ['Anvil', 'Catapult', 'Disguise', 'Mousetrap', '???']
