@@ -43,8 +43,8 @@ def inventory_report(products):
     avg_flammability = 0
 
     for product in products:
-        avg_price += product.price
-        avg_weight += product.weight
+        avg_price += product.price,
+        avg_weight += product.weight,
         avg_flammability += product.flammability
 
         if product.name not in unique.keys():
