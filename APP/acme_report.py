@@ -1,6 +1,7 @@
+
+
 from APP.acme import Product
-from random import randint, sample, uniform, choice
-import random
+from random import randint, sample, uniform
 
 adj = ['Awesome', 'Shiny', 'Impressive','Portable', 'Improved']
 noun = ['Anvil', 'Catapult', 'Disguise','Mousetrap', '???']
