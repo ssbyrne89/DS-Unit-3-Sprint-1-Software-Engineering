@@ -16,24 +16,28 @@ def generate_products(num_products=30):
 
 def inventory_report(products):
 
-    print(f"ACME CORPORATION OFFICIAL INVENTORY REPORT")
+    unique = {}
+    avg_price = 0
+    avg_weight = 0
+    avg_flammability = 0
 
-    print(f"Unique product names:", len(products))
+    for product in products:
+        avg_price += product.price
+        avg_weight += product.weight
+        avg_flammability += product.flammability
 
-    total = 0
-    for i in range(len(products)):
-        total += products[i].price
-    print(f"Avg. price:", total / len(products))
+        if product.name not in unique.keys():
+            unique[product.name] = 1
 
-    total = 0
-    for i in range(len(products)):
-        total += products[i].weight
-    print(f"Avg. weight:", total / len(products))
+    avg_price = avg_price / len(products)
+    avg_weight = avg_weight / len(products)
+    avg_flammability = avg_flammability / len(products)
 
-    total = 0
-    for i in range(len(products)):
-        total += products[i].flammability
-    print(f"Avg. flammability:", total / len(products))
+    print("Acme Inventory Report:\n")
+    print(f"Unique names: {len(unique.keys())}")
+    print(f"Average (mean) price: {avg_price:.2f}")
+    print(f"Average weight: {avg_weight:.2f}")
+    print(f"Average flammability: {avg_flammability:.2f}")
 
 if __name__ == '__main__':
     inventory_report(generate_products())
