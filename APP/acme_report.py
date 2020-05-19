@@ -5,14 +5,37 @@ import random
 adj = ['Awesome', 'Shiny', 'Impressive','Portable', 'Improved']
 noun = ['Anvil', 'Catapult', 'Disguise','Mousetrap', '???']
 
-def generate_products(num_products=30):
+'''def generate_products(num_products=30):
     products_names = [random.choice(adj)+ ' ' +random.choice(noun) for _ in range (num_products)]
     products = []
     for name in products_names:
         products.append(Product(name, price=randint(5, 100), weight=randint(5, 100), flammability=uniform(0.0, 2.5)))
         
     return products
-        
+   '''     
+def generate_products(num_products=30):
+    """
+    Generates num_products of Product from acme.py and returns a list
+    """
+
+    products = []
+
+    for name in range(num_products):
+        name = adj[randint(0, len(adj)-1)] \
+                + " " \
+                + noun[randint(0, len(noun)-1)]
+        price = randint(5, 101)
+        weight = randint(5, 101)
+        flammability = uniform(0.0, 2.5)
+
+        product = Product(name,
+                          price=price,
+                          weight=weight,
+                          flammability=flammability)
+
+        products.append(product)
+
+    return products
 
 def inventory_report(products):
 
