@@ -12,6 +12,8 @@ unittest = "*"
 random = "*"
 python = "*"
 3-7 = "*"
+pycache = "*"
+pipfile = "*"
 
 [requires]
 python_version = "3.8"
