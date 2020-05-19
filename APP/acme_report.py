@@ -16,7 +16,7 @@ def generate_products(num_products=30):
 
 def inventory_report(products):
 
-    print(f"\nACME CORPORATION OFFICIAL INVENTORY REPORT")
+    print(f"ACME CORPORATION OFFICIAL INVENTORY REPORT")
 
     print(f"Unique product names:", len(products))
 

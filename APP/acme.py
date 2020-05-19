@@ -11,9 +11,7 @@ Everything Acme sells is considered a `Product`
 from random import randint
 
 class Product():
-    def __init__(self, name, price=10,
-    weight=20, flammability=0.5,
-    identifier=randint(1000000, 9999999)):
+    def __init__(self, name, price=10, weight=20, flammability=0.5, identifier=randint(1000000, 9999999)):
         self.name = name
         self.price = price
         self.weight = weight

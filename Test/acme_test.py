@@ -1,8 +1,7 @@
 
 import unittest
-import acme
-from acme import Product
-from acme_report import generate_products, adj, noun
+from APP.acme import Product
+from APP.acme_report import generate_products, adj, noun
 
 
 class AcmeProductTests(unittest.TestCase):
