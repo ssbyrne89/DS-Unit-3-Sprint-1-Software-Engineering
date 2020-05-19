@@ -18,7 +18,6 @@ def generate_products(num_products=30):
     """
     Generates num_products of Product from acme.py and returns a list
     """
-
     products = []
 
     for n in range(num_products):
@@ -34,7 +33,7 @@ def generate_products(num_products=30):
 
         products.append(product)
 
-    return products
+        return products
 
 def inventory_report(products):
 
