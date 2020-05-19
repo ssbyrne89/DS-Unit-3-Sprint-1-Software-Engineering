@@ -25,7 +25,7 @@ class Product():
         if x < 0.5:
             message = 'not so stealable'
         else:
-            if x > 1.0:
+            if x >= 1.0:
                 message = "very stealable"
             else:
                 message = 'kinda stealable'
@@ -37,7 +37,7 @@ class Product():
         if x < 10:
             message = '...fizzle.'
         else:
-            if x > 50:
+            if x >= 50:
                 message = "....BABOOM!!"
             else:
                 message = '...boom!'
