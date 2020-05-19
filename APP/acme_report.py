@@ -67,15 +67,15 @@ if __name__ == '__main__':
 import random
 from APP.acme import Product
 
-ADJECTIVES = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
-NOUNS = ['Anvil', 'Catapult', 'Disguise', 'Mousetrap', '???']
+adj = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
+noun = ['Anvil', 'Catapult', 'Disguise', 'Mousetrap', '???']
 
 def generate_products(num_products=30):
     '''should generate a given number of products (default 30), randomly, and return them as a list'''
 
     products = []
     for _ in range(num_products):
-        name = random.sample(ADJECTIVES, 1)[0] + " " + random.sample(NOUNS, 1)[0]
+        name = random.sample(adj, 1)[0] + " " + random.sample(noun, 1)[0]
         price = random.randint(5, 100)
         weight = random.randint(5, 100)
         flammability = random.uniform(0.0, 2.5)
