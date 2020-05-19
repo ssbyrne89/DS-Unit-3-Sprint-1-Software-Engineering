@@ -1,12 +1,4 @@
-'''
-Everything Acme sells is considered a `Product`
-- `name` (string with no default)
-- `price` (integer with default value 10)
-- `weight` (integer with default value 20)
-- `flammability` (float with default value 0.5)
-- `identifier` (integer, automatically genererated as a random (uniform) number
-  anywhere from 1000000 to 9999999, includisve)(inclusive).
-'''
+
 
 from random import randint
 
@@ -41,6 +33,7 @@ class Product():
                 message = '...boom!'
         
         return message
+
 class BoxingGlove(Product):
     def __init__(self, name, price=10,
     weight=10, flammability=0.5,
