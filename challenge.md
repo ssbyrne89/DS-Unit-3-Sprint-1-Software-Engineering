@@ -268,6 +268,13 @@ career here, you'll have to answer the following:
 
 Answer both of these questions (baseline ~5 sentences) here in text.
 
+####  SEANS RESPONSES ####
+Code review is very important and one thing I appreciated when receiving feedback was the new perspective in understanding the concepts. That sort of collaboration helps gain a deeper understanding. For example this past code review I saw another classmate's code and it highlighted to me what I actually grasp conceptually. Furthermore seeing other approaches to the same problem broadens the problem solving toolbelt. 
+
+
+With containers, we can more efficiently allocate computing energy to the bare minimum required to run a particular code or segment of code. This is great because it keeps the compouter from going up in smoke.
+
+
 ### Part 8 - Turn it in!
 
 Provide all the files you wrote (`acme.py`, `acme_report.py`, and
