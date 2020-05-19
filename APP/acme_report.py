@@ -1,10 +1,9 @@
 from APP.acme import Product
-from random import randint, sample, uniform
+from random import randint, sample, uniform, choice
+import random
 
-adj = ('Awesome', 'Shiny', 'Impressive',
-'Portable', 'Improved')
-noun = ('Anvil', 'Catapult', 'Disguise',
-'Mousetrap', '???')
+adj = ['Awesome', 'Shiny', 'Impressive','Portable', 'Improved']
+noun = ['Anvil', 'Catapult', 'Disguise','Mousetrap', '???']
 
 def generate_products(num_products=30):
     products_names = [random.choice(adj)+ ' ' +random.choice(noun) for _ in range (num_products)]
@@ -13,20 +12,28 @@ def generate_products(num_products=30):
         products.append(Product(name, price=randint(5, 100), weight=randint(5, 100), flammability=uniform(0.0, 2.5)))
         
     return products
-
-
-def inventory_report(products)
-    products.nunique()
-    for price in products:
-        return(iter in range(limit)]
-    pass 
-    limit = 30
-    name = [(random.choice(adj)+ ' ' +random.choice(noun)) for iter in range(limit)]
-    
-
-    for name in products:
-        products = Product(name)
         
 
+def inventory_report(products):
 
-def inventory_report
+    print(f"\nACME CORPORATION OFFICIAL INVENTORY REPORT")
+
+    print(f"Unique product names:", len(products))
+
+    total = 0
+    for i in range(len(products)):
+        total += products[i].price
+    print(f"Avg. price:", total / len(products))
+
+    total = 0
+    for i in range(len(products)):
+        total += products[i].weight
+    print(f"Avg. weight:", total / len(products))
+
+    total = 0
+    for i in range(len(products)):
+        total += products[i].flammability
+    print(f"Avg. flammability:", total / len(products))
+
+if __name__ == '__main__':
+    inventory_report(generate_products())
