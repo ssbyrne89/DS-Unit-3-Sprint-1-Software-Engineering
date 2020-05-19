@@ -21,9 +21,9 @@ def generate_products(num_products=30):
     products = []
 
     for n in range(num_products):
-        name = adj[randint(0, len(adj)-1)] + " " + noun[randint(0, len(noun)-1)]
-        price = randint(5, 101)
-        weight = randint(5, 101)
+        name = adj[randint(0, len(adj)-1)] + " " + noun[randint(0, len(noun)-1)],
+        price = randint(5, 101),
+        weight = randint(5, 101),
         flammability = uniform(0.0, 2.5)
 
         product = Product(name,
