@@ -7,7 +7,7 @@ adj = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
 noun = ['Anvil', 'Catapult', 'Disguise', 'Mousetrap', '???']
 
 def generate_products(num_products=30):
-    '''should generate a given number of products (default 30), randomly, and return them as a list'''
+    '''randomly generates a products list of 30 items'''
 
     products = []
     for _ in range(num_products):
@@ -21,26 +21,25 @@ def generate_products(num_products=30):
     return products
 
 def inventory_report(products):
-    '''takes a list of products, and prints a "nice" summary'''
 
-    print("\nACME CORPORATION OFFICIAL INVENTORY REPORT")
-
-    print("Unique product names:", len(products))
+    print("ACME CORPORATION OFFICIAL INVENTORY REPORT")
+    print(len(set(prod.name for prod in products)))
+    
 
     total = 0
     for i in range(len(products)):
         total += products[i].price
-    print("Average price:", total / len(products))
+    print("Avg price:", total / len(products))
 
     total = 0
     for i in range(len(products)):
         total += products[i].weight
-    print("Average weight:", total / len(products))
+    print("Avg weight:", total / len(products))
 
     total = 0
     for i in range(len(products)):
         total += products[i].flammability
-    print("Average flammability:", total / len(products))
+    print("Avg flammability:", total / len(products))
 
 if __name__ == '__main__':
     inventory_report(generate_products())
