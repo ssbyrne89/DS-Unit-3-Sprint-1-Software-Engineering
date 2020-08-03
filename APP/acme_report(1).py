@@ -23,7 +23,7 @@ def generate_products(num_products=30):
 def inventory_report(products):
 
     print("ACME CORPORATION OFFICIAL INVENTORY REPORT")
-    print(len(set(prod.name for prod in products)))
+    print("Number of unique products:", len(set(prod.name for prod in products)))
     
 
     total = 0
